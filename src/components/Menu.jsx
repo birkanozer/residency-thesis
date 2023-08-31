@@ -89,10 +89,8 @@ function Menu() {
   const end = <InputText placeholder='Search' type='text' />;
 
   return (
-    <div>
-      <div className='card'>
-        <Menubar model={items} start={start} end={end} />
-      </div>
+    <div className='p-card'>
+      <Menubar model={items} start={start} end={end} />
     </div>
   );
 }
