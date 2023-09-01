@@ -1,29 +1,34 @@
 import { Card } from "primereact/card";
 import { Button } from "primereact/button";
 
-import "primeflex/primeflex.css";
-import "./Header.css";
+import file from "../../assets/img/marmaralogo.png";
 
 const Header = () => {
   const title =
     "ERKEN BAŞLANGIÇLI BAĞIRSAK HASTALIKLARINDA PROTEİN KAYBETTİRİCİ ENTEROPATİ VE İNFLAMATUAR BAĞIRSAK HASTALIKLARININ AYIRT EDİCİ VE ORTAK ÖZELLİKLERİ";
 
   const handleDownload = () => {
-    alert("İndirme işlemi henüz aktif değil.");
+    const link = document.createElement("a");
+    link.download = "Tez";
+    link.href = file;
+    link.click();
   };
 
   return (
-    <div className='p-col-12 p-mt-5'>
-      <Card title={title}>
-        <p className='p-text-left'>
+    <div className='col-10 col-offset-1 mt-6 text-center'>
+      <Card title={title} className='shadow-5'>
+        <p className='text-left'>
           Çocuk Sağlığı ve Hastalıkları Uzmanlık tezim için kullandığım
           grafiklerin etkileşimli haline buradan ulaşabilirsiniz. En iyi deneyim
           için bilgisayar ya da tablet kullanmanız önerilir. Tezimin dijital
           versiyonunu aşağıdaki bağlantıdan indirebilirsiniz.
         </p>
-        <p className='p-text-center'>
-          <Button label='İndir' onClick={handleDownload} />
-        </p>
+        <Button
+          label='İndir'
+          icon='pi pi-download'
+          onClick={handleDownload}
+          className='mt-2'
+        />
       </Card>
     </div>
   );
