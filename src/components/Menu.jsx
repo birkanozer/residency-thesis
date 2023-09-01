@@ -1,7 +1,7 @@
 import { Menubar } from "primereact/menubar";
 import { InputText } from "primereact/inputtext";
 
-function Menu() {
+const Menu = () => {
   const items = [
     {
       label: "Users",
@@ -93,6 +93,6 @@ function Menu() {
       <Menubar model={items} start={start} end={end} />
     </div>
   );
-}
+};
 
 export default Menu;
