@@ -1,7 +1,7 @@
 import { Card } from "primereact/card";
 import { Button } from "primereact/button";
 
-import file from "../../assets/img/marmaralogo.png";
+import file from "../../assets/tez.pdf";
 
 const Header = () => {
   const title =
