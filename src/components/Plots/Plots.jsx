@@ -12,9 +12,13 @@ const Plots = () => {
     const [title, plot] = entry;
     const data = plot.data;
     const layout = plot.layout;
+    const id = title
+      .replace("Şekil", "figure")
+      .replace(" ", "")
+      .replace(":", "");
 
     plots_list.push(
-      <div className='col-10 col-offset-1 mt-3 text-center'>
+      <div className='col-10 col-offset-1 mt-3 text-center' id={id}>
         <Card title={title} className='shadow-5'>
           <Plot data={data} layout={layout} />
         </Card>
